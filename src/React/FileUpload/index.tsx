@@ -66,13 +66,10 @@ export const FileUpload = (props: FileUploadProps): React.ReactElement => {
           <input type="file" multiple={!!multiple} onChange={onFilesChange} />
         </div>
         <div className="plus normal">
-          <img src="https://chatbot.sp-cdn.shopee.com/web/Anoxm7MAnJRS0P8RjgAARw.svg" />
+          <img src="https://img.zys.me/pYxtHP6.svg" />
         </div>
         <div className="plus hover">
-          <img
-            className="hover"
-            src="https://chatbot.sp-cdn.shopee.com/web/AnoxMlkAJIBj0P8RAQQARw.svg"
-          />
+          <img className="hover" src="https://img.zys.me/pYgtHpC.svg" />
         </div>
         <div className="text">{_("Drag & Drop Files Here")}</div>
         <div className="text">{_("or Paste Directly on This Page")}</div>

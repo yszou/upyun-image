@@ -117,7 +117,11 @@ export const PageIndex = (props: PageIndexProps): React.ReactElement => {
         <div className="upload" key={uploadKey}>
           <Upload onError={onError} onSuccess={onSuccess} onUpload={onUpload} />
         </div>
-        {!itemList ? <div className="loading">Loading ...</div> : null}
+        {!itemList ? (
+          <div className="loading">
+            <img src="https://img.zys.me/pYltHpB.gif" />
+          </div>
+        ) : null}
         <div className="content">
           {(itemList || []).map((obj) => {
             return (
