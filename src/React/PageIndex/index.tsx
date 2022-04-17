@@ -37,6 +37,16 @@ export const PageIndex = (props: PageIndexProps): React.ReactElement => {
         data.split("\n").forEach((row: string) => {
           const cell = row.split("\t");
           const name = cell[0];
+          if (
+            name in
+            {
+              "app.min.js": true,
+              "app.min.css": true,
+              "index.html": true,
+            }
+          ) {
+            return;
+          }
           objList.push({
             name,
             url: `${prefix}/${name}`,
