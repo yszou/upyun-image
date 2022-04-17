@@ -14,6 +14,7 @@ export class Upyun {
   path: string;
   method: string;
   params: Record<string, any>;
+  headers: Record<string, any>;
   form: FormData | null;
 
   constructor(
@@ -30,6 +31,7 @@ export class Upyun {
     this.path = "";
     this.method = "";
     this.params = {};
+    this.headers = {};
   }
 
   sign(method: string, uri: string, date: string, policy: string = "") {
@@ -55,6 +57,7 @@ export class Upyun {
       headers: {
         Authorization: `UPYUN ${operator}:${sign}`,
         "X-Date": date,
+        ...this.headers,
       },
     };
     if (axiosParams.method === "GET") {

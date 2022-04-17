@@ -9,16 +9,18 @@ const uuid = "e4ca4809558d465dbd6c97af33a41ec2";
 interface UploadProps {
   onUpload?: (name: string) => void;
   onError?: (error: string) => void;
+  onSuccess?: (error: string) => void;
 }
 
 export const Upload = (props: UploadProps): React.ReactElement => {
-  const { onUpload = noop, onError = noop } = props;
-  const onFile = (file: File) => {
+  const { onUpload = noop, onError = noop, onSuccess = noop } = props;
+  const onFile = (file: File, order: number = 0) => {
     new Upyun()
-      .upload(file)
+      .upload(file, order)
       .call()
       .then((response) => {
         if (response.data.code === 200) {
+          onSuccess("Upload successfully");
           onUpload(response.data.url);
         } else {
           onError(response.data.msg);

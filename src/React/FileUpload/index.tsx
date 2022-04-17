@@ -55,7 +55,7 @@ export const FileUpload = (props: FileUploadProps): React.ReactElement => {
     }
     for (let i = 0, l = e.target.files.length; i < l; i += 1) {
       const file = e.target.files[i];
-      onFile(file);
+      onFile(file, i);
     }
   };
   return (
