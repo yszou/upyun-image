@@ -1,5 +1,5 @@
 {
-  "name": "ffe",
+  "name": "image",
   "version": "0.1.0",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,7 @@
     "build": "react-app-rewired build"
   },
   "author": "YS.Zou",
-  "license": "ISC",
+  "license": "GPLv3",
   "browserslist": {
     "production": [
       ">0.2%",

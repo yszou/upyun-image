@@ -2,11 +2,11 @@
 
 body
   margin: 0
-  width: 100%
-  min-height: 100vh
-  background: #cecece
 
 .#{$PREFIX + "Index"}
+  background: #cecece
+  width: 100%
+  min-height: 100vh
   > .wrapper
     max-width: 860px
     min-height: 100vh
@@ -14,3 +14,16 @@ body
     padding: 0 30px
     box-sizing: border-box
     background-color: white
+    > .head
+      overflow: hidden
+      padding: 2px 0
+      box-sizing: border-box
+      > .item
+        float: right
+        cursor: pointer
+        color: #1890ff
+        font-family: sans-serif
+        user-select: none
+
+    > .settings
+      margin: 20px 0

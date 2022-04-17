@@ -2,6 +2,7 @@ import React, { ChangeEvent, useEffect } from "react";
 import ReactDOM from "react-dom";
 import "./index.sass";
 import { getClassName, noop } from "../Base";
+import { _ } from "../../utils/i18n";
 
 const uuid = "2a48e77845ef4c8090cf11345c3a0bbe";
 
@@ -73,8 +74,8 @@ export const FileUpload = (props: FileUploadProps): React.ReactElement => {
             src="https://chatbot.sp-cdn.shopee.com/web/AnoxMlkAJIBj0P8RAQQARw.svg"
           />
         </div>
-        <div className="text">{"Drag & Drop Files Here"}</div>
-        <div className="text">{"or Paste Directly on This Page"}</div>
+        <div className="text">{_("Drag & Drop Files Here")}</div>
+        <div className="text">{_("or Paste Directly on This Page")}</div>
       </div>
     </div>
   );

@@ -5,6 +5,7 @@ import { getClassName, noop } from "../Base";
 import { Upyun } from "../../api/upyun";
 import { Upload } from "../Upload";
 import { getUrlPrefix } from "../../api/config";
+import { _ } from "../../utils/i18n";
 
 const uuid = "f8403306efa1402198993e0405aa88ad";
 interface PageIndexProps {}
@@ -70,7 +71,7 @@ export const PageIndex = (props: PageIndexProps): React.ReactElement => {
     return () => {
       window.navigator.clipboard.writeText(obj.url).then(
         () => {
-          onSuccess(`Copy Successfully`);
+          onSuccess(_("Copy Successfully"));
         },
         (err) => {
           onError(err);
@@ -128,7 +129,7 @@ export const PageIndex = (props: PageIndexProps): React.ReactElement => {
                   }}
                 />
                 <div className="layer">
-                  <div className="text">Click to Copy URL</div>
+                  <div className="text">{_("Click to Copy URL")}</div>
                 </div>
               </div>
             );

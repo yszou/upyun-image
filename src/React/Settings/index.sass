@@ -1,0 +1,36 @@
+@import '../Base/index'
+
+.#{$PREFIX + "Settings"}
+  > .wrapper
+    overflow: hidden
+    background: black
+    color: white
+    padding: 20px
+    box-sizing: border-box
+    border-radius: 8px
+    > .item
+      float: left
+      padding: 0 10px
+      box-sizing: border-box
+      &.operator
+        > .value > input
+          width: 100px
+      &.password
+        > .value > input
+          width: 300px
+      &.bucket
+        > .value > input
+          width: 150px
+      > .name
+        padding: 5px 0
+        box-sizing: border-box
+      > .value
+        > input
+          outline: none
+          padding: 3px
+          box-sizing: border-box
+          font-family: monospace
+        > button
+          line-height: 40px
+          padding: 0 10px
+          box-sizing: border-box

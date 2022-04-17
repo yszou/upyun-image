@@ -4,6 +4,7 @@ import "./index.sass";
 import { getClassName, noop } from "../Base";
 import { FileUpload } from "../FileUpload";
 import { Upyun } from "../../api/upyun";
+import { _ } from "../../utils/i18n";
 
 const uuid = "e4ca4809558d465dbd6c97af33a41ec2";
 interface UploadProps {
@@ -20,7 +21,7 @@ export const Upload = (props: UploadProps): React.ReactElement => {
       .call()
       .then((response) => {
         if (response.data.code === 200) {
-          onSuccess("Upload successfully");
+          onSuccess(_("Upload Successfully"));
           onUpload(response.data.url);
         } else {
           onError(response.data.msg);
